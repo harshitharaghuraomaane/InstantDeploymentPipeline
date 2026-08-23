@@ -1,3 +1,4 @@
 #!/bin/bash
 
-systemctl stop httpd
+docker stop instant-deployment-container || true
+docker rm instant-deployment-container || true

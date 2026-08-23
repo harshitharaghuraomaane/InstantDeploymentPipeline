@@ -1,5 +1,9 @@
 #!/bin/bash
 
-yum install -y httpd
+if ! command -v docker &> /dev/null
+then
+    dnf install docker -y
+fi
 
-chmod -R 755 /var/www/html
+systemctl start docker
+systemctl enable docker
