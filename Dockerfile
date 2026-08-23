@@ -5,3 +5,5 @@ COPY style.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
 
 EXPOSE 80
+
+
