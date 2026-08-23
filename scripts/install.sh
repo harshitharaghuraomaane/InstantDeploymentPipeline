@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if ! command -v docker &> /dev/null
+if ! command -v docker >/dev/null 2>&1
 then
     dnf install docker -y
 fi
 
-systemctl start docker
 systemctl enable docker
+systemctl start docker

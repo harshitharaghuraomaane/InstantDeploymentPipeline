@@ -1,4 +1,6 @@
 #!/bin/bash
 
-docker stop instant-deployment-container || true
-docker rm instant-deployment-container || true
+if docker ps -a --format '{{.Names}}' | grep -q '^instant-deployment-container$'
+then
+    docker rm -f instant-deployment-container
+fi
