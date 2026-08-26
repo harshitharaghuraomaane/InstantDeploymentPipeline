@@ -6,6 +6,7 @@ files:
     destination: /home/ec2-user/InstantDeploymentPipeline
 
 hooks:
+
   BeforeInstall:
     - location: scripts/stop.sh
       timeout: 300
