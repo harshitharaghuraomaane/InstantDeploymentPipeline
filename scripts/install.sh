@@ -10,4 +10,4 @@ fi
 systemctl enable docker
 systemctl start docker
 
-docker --version
+echo "Docker is ready."

@@ -1,6 +1,12 @@
 #!/bin/bash
 
-if docker ps -a --format '{{.Names}}' | grep -q '^instant-deployment-container$'
-then
-    docker rm -f instant-deployment-container
-fi
+echo "Stopping old containers..."
+
+docker stop instant-deployment-container 2>/dev/null || true
+docker rm instant-deployment-container 2>/dev/null || true
+
+docker stop instant-website 2>/dev/null || true
+docker rm instant-website 2>/dev/null || true
+
+echo "Old containers removed."
+exit 0

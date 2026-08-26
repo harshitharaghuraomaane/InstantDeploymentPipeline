@@ -1,9 +1,6 @@
 version: 0.0
-os: linux
 
-files:
-  - source: /
-    destination: /home/ec2-user/InstantDeploymentPipeline
+os: linux
 
 hooks:
 
@@ -19,10 +16,5 @@ hooks:
 
   ApplicationStart:
     - location: scripts/start.sh
-      timeout: 300
-      runas: root
-
-  ValidateService:
-    - location: scripts/validate.sh
       timeout: 300
       runas: root
