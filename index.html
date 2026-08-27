@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>InstantDeploy | DevOps Dashboard</title>
 
-   <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
+
     <aside class="sidebar">
 
         <div class="logo">
             <div class="logo-box">ID</div>
 
-            <div>
+            <div class="logo-text">
                 <h2>InstantDeploy</h2>
                 <p>DevOps Platform</p>
             </div>
         </div>
 
-        <div class="menu-title">MAIN MENU</div>
+        <div class="menu-title">DEPLOYMENT</div>
 
         <nav>
+
             <a href="#dashboard" class="active">
                 <span>▦</span>
                 Dashboard
@@ -50,34 +51,43 @@
                 <span>▣</span>
                 Docker
             </a>
+
         </nav>
 
         <div class="sidebar-bottom">
+
             <div class="connection">
                 <span></span>
                 AWS Connected
             </div>
 
-            <small>CodeDeploy Environment</small>
+            <small>AWS CodeDeploy Environment</small>
+
         </div>
 
     </aside>
 
 
-    <!-- MAIN -->
+    <!-- ================= MAIN ================= -->
+
     <main class="main">
 
         <!-- HEADER -->
+
         <header class="header">
 
             <div>
-                <p class="page-label">DEPLOYMENT MANAGEMENT</p>
+
+                <p class="page-label">
+                    DEPLOYMENT MANAGEMENT
+                </p>
 
                 <h1>Instant Deployment</h1>
 
                 <p class="description">
-                    Monitor application deployment across AWS infrastructure
+                    Monitor and manage application deployments across AWS infrastructure
                 </p>
+
             </div>
 
             <div class="header-right">
@@ -88,12 +98,16 @@
                 </div>
 
                 <div class="user">
-                    <div class="avatar">AD</div>
+
+                    <div class="avatar">
+                        AD
+                    </div>
 
                     <div>
                         <strong>Administrator</strong>
                         <small>Deployment Manager</small>
                     </div>
+
                 </div>
 
             </div>
@@ -101,7 +115,8 @@
         </header>
 
 
-        <!-- CURRENT DEPLOYMENT -->
+        <!-- ================= CURRENT DEPLOYMENT ================= -->
+
         <section class="deployment-card" id="dashboard">
 
             <div class="deployment-info">
@@ -118,8 +133,13 @@
                 </p>
 
                 <div class="version">
+
                     <strong>v2.4.1</strong>
-                    <span>Latest Version</span>
+
+                    <span>
+                        Latest Stable Version
+                    </span>
+
                 </div>
 
             </div>
@@ -128,8 +148,15 @@
             <div class="deployment-progress">
 
                 <div class="progress-header">
-                    <span>Deployment Progress</span>
-                    <strong>100%</strong>
+
+                    <span>
+                        Deployment Progress
+                    </span>
+
+                    <strong>
+                        100%
+                    </strong>
+
                 </div>
 
                 <div class="progress-bar">
@@ -137,8 +164,15 @@
                 </div>
 
                 <div class="progress-status">
-                    <span>✓ Deployment completed successfully</span>
-                    <span>Production</span>
+
+                    <span>
+                        ✓ Deployment completed successfully
+                    </span>
+
+                    <span>
+                        Production
+                    </span>
+
                 </div>
 
             </div>
@@ -146,12 +180,16 @@
         </section>
 
 
-        <!-- OBJECTIVES -->
+        <!-- ================= SECTION TITLE ================= -->
+
         <div class="section-heading">
 
             <div>
+
                 <p>PROJECT OBJECTIVES</p>
+
                 <h2>Deployment Controls</h2>
+
             </div>
 
             <span class="healthy">
@@ -161,10 +199,13 @@
         </div>
 
 
+        <!-- ================= OBJECTIVE CARDS ================= -->
+
         <section class="cards">
 
 
-            <!-- MANUAL APPROVAL -->
+            <!-- ================= MANUAL APPROVAL ================= -->
+
             <div class="card" id="approval">
 
                 <div class="card-header">
@@ -183,18 +224,30 @@
 
                 <p>
                     Production deployment is protected by a manual
-                    approval gate.
+                    approval gate before release.
                 </p>
+
 
                 <div class="approval-box">
 
                     <div class="approval-user">
-                        <div class="mini-avatar">AD</div>
+
+                        <div class="mini-avatar">
+                            AD
+                        </div>
 
                         <div>
-                            <strong>Administrator</strong>
-                            <span>Approved deployment</span>
+
+                            <strong>
+                                Administrator
+                            </strong>
+
+                            <span>
+                                Production deployment approved
+                            </span>
+
                         </div>
+
                     </div>
 
                     <div class="approved-check">
@@ -203,6 +256,22 @@
 
                 </div>
 
+
+                <div class="approval-details">
+
+                    <div>
+                        <span>Approval Stage</span>
+                        <strong>Production</strong>
+                    </div>
+
+                    <div>
+                        <span>Status</span>
+                        <strong class="green-text">Approved</strong>
+                    </div>
+
+                </div>
+
+
                 <button class="button success-button">
                     ✓ Deployment Approved
                 </button>
@@ -210,7 +279,8 @@
             </div>
 
 
-            <!-- ROLLBACK -->
+            <!-- ================= ROLLBACK ================= -->
+
             <div class="card" id="rollback">
 
                 <div class="card-header">
@@ -220,7 +290,7 @@
                     </div>
 
                     <span class="badge warning">
-                        READY
+                        AVAILABLE
                     </span>
 
                 </div>
@@ -228,35 +298,75 @@
                 <h3>Rollback</h3>
 
                 <p>
-                    Restore the previous stable version when a
-                    deployment failure occurs.
+                    Restore the previous stable application version
+                    when a deployment failure occurs.
                 </p>
+
 
                 <div class="version-comparison">
 
                     <div>
-                        <span>Current</span>
-                        <strong>v2.4.1</strong>
+
+                        <span>
+                            CURRENT VERSION
+                        </span>
+
+                        <strong>
+                            v2.4.1
+                        </strong>
+
                     </div>
 
-                    <div class="arrow">→</div>
+                    <div class="arrow">
+                        →
+                    </div>
 
                     <div>
-                        <span>Rollback Target</span>
-                        <strong>v2.4.0</strong>
+
+                        <span>
+                            STABLE VERSION
+                        </span>
+
+                        <strong>
+                            v2.4.0
+                        </strong>
+
                     </div>
 
                 </div>
 
+
+                <div class="rollback-info">
+
+                    <span class="rollback-icon-small">
+                        ↻
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Rollback Target Ready
+                        </strong>
+
+                        <p>
+                            Previous stable release available
+                        </p>
+
+                    </div>
+
+                </div>
+
+
                 <button class="button rollback-button">
-                    ↻ Rollback to v2.4.0
+                    ↻ Rollback Available
                 </button>
 
             </div>
 
 
-            <!-- MULTI REGION -->
-            <div class="card" id="regions">
+            <!-- ================= MULTI REGION ================= -->
+
+            <div class="card region-card" id="regions">
 
                 <div class="card-header">
 
@@ -273,33 +383,15 @@
                 <h3>Multi-Region Deployment</h3>
 
                 <p>
-                    Application availability is maintained across
-                    multiple AWS regions.
+                    Application is deployed across multiple AWS
+                    regions for improved availability.
                 </p>
+
 
                 <div class="regions">
 
-                    <div class="region-item">
 
-                        <div class="region-name">
-
-                            <div class="region-icon">
-                                AWS
-                            </div>
-
-                            <div>
-                                <strong>ap-south-1</strong>
-                                <span>Mumbai</span>
-                            </div>
-
-                        </div>
-
-                        <span class="region-online">
-                            ● Healthy
-                        </span>
-
-                    </div>
-
+                    <!-- REGION 1 -->
 
                     <div class="region-item">
 
@@ -310,24 +402,86 @@
                             </div>
 
                             <div>
-                                <strong>ap-southeast-1</strong>
-                                <span>Singapore</span>
+
+                                <strong>
+                                    ap-south-1
+                                </strong>
+
+                                <span>
+                                    Mumbai, India
+                                </span>
+
                             </div>
 
                         </div>
 
-                        <span class="region-online">
-                            ● Healthy
-                        </span>
+                        <div class="region-status">
+
+                            <span>●</span>
+
+                            <div>
+                                <strong>Deployed</strong>
+                                <small>v2.4.1</small>
+                            </div>
+
+                        </div>
 
                     </div>
+
+
+                    <!-- REGION 2 -->
+
+                    <div class="region-item">
+
+                        <div class="region-name">
+
+                            <div class="region-icon">
+                                AWS
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    ap-southeast-1
+                                </strong>
+
+                                <span>
+                                    Singapore
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="region-status">
+
+                            <span>●</span>
+
+                            <div>
+                                <strong>Deployed</strong>
+                                <small>v2.4.1</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="region-summary">
+
+                    <span>Deployment consistency</span>
+
+                    <strong>100%</strong>
 
                 </div>
 
             </div>
 
 
-            <!-- DOCKER -->
+            <!-- ================= DOCKER ================= -->
+
             <div class="card" id="docker">
 
                 <div class="card-header">
@@ -346,31 +500,79 @@
 
                 <p>
                     The application is packaged and deployed using
-                    Docker containers.
+                    a Docker container.
                 </p>
+
 
                 <div class="docker-info">
 
                     <div>
-                        <span>Docker Image</span>
-                        <strong>instantdeploy:v2.4.1</strong>
+
+                        <span>
+                            Docker Image
+                        </span>
+
+                        <strong>
+                            instant-deployment-app:latest
+                        </strong>
+
                     </div>
 
                     <div>
-                        <span>Container</span>
-                        <strong>instant-deployment-app</strong>
+
+                        <span>
+                            Application Version
+                        </span>
+
+                        <strong>
+                            v2.4.1
+                        </strong>
+
                     </div>
 
                     <div>
-                        <span>Container Port</span>
-                        <strong>8080</strong>
+
+                        <span>
+                            Container
+                        </span>
+
+                        <strong>
+                            instant-deployment-container
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Port Mapping
+                        </span>
+
+                        <strong>
+                            80 : 80
+                        </strong>
+
                     </div>
 
                 </div>
 
+
                 <div class="container-running">
+
                     <span></span>
-                    Container Running
+
+                    <div>
+
+                        <strong>
+                            Container Running
+                        </strong>
+
+                        <small>
+                            Application is serving traffic
+                        </small>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -378,14 +580,20 @@
         </section>
 
 
-        <!-- PIPELINE -->
+        <!-- ================= PIPELINE ================= -->
+
         <section class="pipeline-card">
 
             <div class="pipeline-header">
 
                 <div>
+
                     <p>DEPLOYMENT WORKFLOW</p>
-                    <h2>Release Pipeline</h2>
+
+                    <h2>
+                        Release Pipeline
+                    </h2>
+
                 </div>
 
                 <span class="release">
@@ -397,42 +605,101 @@
 
             <div class="pipeline">
 
+
                 <div class="pipeline-step completed">
-                    <div class="step-circle">✓</div>
-                    <strong>Build</strong>
-                    <span>Completed</span>
+
+                    <div class="step-circle">
+                        ✓
+                    </div>
+
+                    <strong>
+                        Build
+                    </strong>
+
+                    <span>
+                        Completed
+                    </span>
+
                 </div>
+
 
                 <div class="pipeline-line"></div>
 
+
                 <div class="pipeline-step completed">
-                    <div class="step-circle">✓</div>
-                    <strong>Docker</strong>
-                    <span>Container Ready</span>
+
+                    <div class="step-circle">
+                        ✓
+                    </div>
+
+                    <strong>
+                        Docker
+                    </strong>
+
+                    <span>
+                        Container Ready
+                    </span>
+
                 </div>
+
 
                 <div class="pipeline-line"></div>
 
+
                 <div class="pipeline-step completed">
-                    <div class="step-circle">✓</div>
-                    <strong>Approval</strong>
-                    <span>Approved</span>
+
+                    <div class="step-circle">
+                        ✓
+                    </div>
+
+                    <strong>
+                        Approval
+                    </strong>
+
+                    <span>
+                        Approved
+                    </span>
+
                 </div>
+
 
                 <div class="pipeline-line"></div>
 
+
                 <div class="pipeline-step completed">
-                    <div class="step-circle">✓</div>
-                    <strong>Multi-Region</strong>
-                    <span>Deployed</span>
+
+                    <div class="step-circle">
+                        ✓
+                    </div>
+
+                    <strong>
+                        Multi-Region
+                    </strong>
+
+                    <span>
+                        Deployed
+                    </span>
+
                 </div>
 
+
                 <div class="pipeline-line"></div>
+
 
                 <div class="pipeline-step current">
-                    <div class="step-circle">●</div>
-                    <strong>Production</strong>
-                    <span>Live</span>
+
+                    <div class="step-circle">
+                        ●
+                    </div>
+
+                    <strong>
+                        Production
+                    </strong>
+
+                    <span>
+                        Live
+                    </span>
+
                 </div>
 
             </div>
@@ -440,7 +707,8 @@
         </section>
 
 
-        <!-- FOOTER -->
+        <!-- ================= FOOTER ================= -->
+
         <footer>
 
             <span>
@@ -448,8 +716,10 @@
             </span>
 
             <span>
-                AWS CodeDeploy &nbsp; • &nbsp;
-                Docker &nbsp; • &nbsp;
+                AWS CodeDeploy
+                &nbsp; • &nbsp;
+                Docker
+                &nbsp; • &nbsp;
                 Multi-Region Deployment
             </span>
 

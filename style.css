@@ -10,24 +10,25 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f7fb;
+    background: #f4f7fb;
     color: #172033;
 }
 
 
-/* =========================
+/* =========================================
    SIDEBAR
-========================= */
+========================================= */
 
 .sidebar {
     position: fixed;
+
     left: 0;
     top: 0;
 
     width: 250px;
     height: 100vh;
 
-    background: #111827;
+    background: #101827;
 
     color: white;
 
@@ -41,6 +42,7 @@ body {
 
 .logo {
     display: flex;
+
     align-items: center;
 
     gap: 12px;
@@ -52,16 +54,17 @@ body {
     width: 42px;
     height: 42px;
 
-    background: #287df0;
-
     border-radius: 10px;
+
+    background: #287df0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 14px;
     font-weight: 800;
+
+    font-size: 14px;
 }
 
 .logo h2 {
@@ -69,7 +72,7 @@ body {
 }
 
 .logo p {
-    color: #7f8ca3;
+    color: #7e8ba1;
 
     font-size: 10px;
 
@@ -81,7 +84,7 @@ body {
 
     font-size: 9px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     letter-spacing: 1.5px;
 
@@ -90,15 +93,16 @@ body {
 
 nav {
     display: flex;
+
     flex-direction: column;
 
     gap: 6px;
 }
 
 nav a {
-    text-decoration: none;
+    color: #8c98ab;
 
-    color: #8996aa;
+    text-decoration: none;
 
     padding: 13px 14px;
 
@@ -115,14 +119,17 @@ nav a {
     transition: .2s;
 }
 
-nav a:hover,
-nav a.active {
-    background: #1d2a3e;
+nav a:hover {
+    background: #1c293e;
 
     color: white;
 }
 
 nav a.active {
+    background: #1d2a40;
+
+    color: white;
+
     border-left: 3px solid #287df0;
 }
 
@@ -139,9 +146,9 @@ nav a span {
 }
 
 .connection {
-    font-size: 11px;
-
     color: #8e9caf;
+
+    font-size: 11px;
 
     margin-bottom: 7px;
 }
@@ -160,15 +167,15 @@ nav a span {
 }
 
 .sidebar-bottom small {
-    color: #56647a;
+    color: #59677d;
 
     font-size: 9px;
 }
 
 
-/* =========================
+/* =========================================
    MAIN
-========================= */
+========================================= */
 
 .main {
     margin-left: 250px;
@@ -179,7 +186,9 @@ nav a span {
 }
 
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 .header {
     display: flex;
@@ -191,9 +200,7 @@ nav a span {
     margin-bottom: 28px;
 }
 
-.page-label,
-.section-heading p,
-.pipeline-header p {
+.page-label {
     color: #718097;
 
     font-size: 9px;
@@ -204,7 +211,7 @@ nav a span {
 }
 
 .header h1 {
-    font-size: 27px;
+    font-size: 28px;
 
     margin: 6px 0;
 }
@@ -226,7 +233,7 @@ nav a span {
 .aws-badge {
     background: white;
 
-    border: 1px solid #e5e9f0;
+    border: 1px solid #e4e9f0;
 
     padding: 9px 13px;
 
@@ -267,8 +274,10 @@ nav a span {
     margin-top: 3px;
 }
 
-.avatar,
-.mini-avatar {
+.avatar {
+    width: 34px;
+    height: 34px;
+
     background: #e7effc;
 
     color: #2877dd;
@@ -281,39 +290,27 @@ nav a span {
     justify-content: center;
 
     font-weight: 700;
-}
-
-.avatar {
-    width: 34px;
-    height: 34px;
 
     font-size: 10px;
 }
 
-.mini-avatar {
-    width: 30px;
-    height: 30px;
 
-    font-size: 9px;
-}
-
-
-/* =========================
-   DEPLOYMENT CARD
-========================= */
+/* =========================================
+   CURRENT DEPLOYMENT
+========================================= */
 
 .deployment-card {
     background: #172a46;
 
     border-radius: 14px;
 
-    padding: 25px 28px;
+    padding: 26px 28px;
 
     color: white;
 
     display: grid;
 
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1.4fr;
 
     gap: 50px;
 
@@ -346,7 +343,7 @@ nav a span {
 }
 
 .deployment-info h2 {
-    font-size: 20px;
+    font-size: 21px;
 
     margin: 9px 0 4px;
 }
@@ -368,7 +365,7 @@ nav a span {
 }
 
 .version strong {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .version span {
@@ -381,19 +378,16 @@ nav a span {
     align-self: center;
 }
 
-.progress-header,
-.progress-status {
+.progress-header {
     display: flex;
 
     justify-content: space-between;
 
-    font-size: 10px;
-}
-
-.progress-header {
     margin-bottom: 9px;
 
     color: #bdc8d7;
+
+    font-size: 10px;
 }
 
 .progress-header strong {
@@ -421,9 +415,15 @@ nav a span {
 }
 
 .progress-status {
-    color: #8091aa;
+    display: flex;
+
+    justify-content: space-between;
 
     margin-top: 9px;
+
+    color: #8091aa;
+
+    font-size: 9px;
 }
 
 .progress-status span:first-child {
@@ -431,9 +431,9 @@ nav a span {
 }
 
 
-/* =========================
+/* =========================================
    SECTION HEADING
-========================= */
+========================================= */
 
 .section-heading {
     display: flex;
@@ -443,6 +443,17 @@ nav a span {
     align-items: end;
 
     margin-bottom: 15px;
+}
+
+.section-heading p,
+.pipeline-header p {
+    color: #718097;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
 }
 
 .section-heading h2 {
@@ -460,9 +471,9 @@ nav a span {
 }
 
 
-/* =========================
-   OBJECTIVE CARDS
-========================= */
+/* =========================================
+   CARDS
+========================================= */
 
 .cards {
     display: grid;
@@ -505,8 +516,8 @@ nav a span {
 }
 
 .objective-icon {
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 39px;
 
     border-radius: 9px;
 
@@ -515,9 +526,9 @@ nav a span {
     align-items: center;
     justify-content: center;
 
-    font-weight: 800;
-
     font-size: 17px;
+
+    font-weight: 800;
 }
 
 .approval {
@@ -545,13 +556,13 @@ nav a span {
 }
 
 .badge {
-    font-size: 8px;
-
-    font-weight: 800;
-
     padding: 5px 8px;
 
     border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 800;
 }
 
 .success {
@@ -581,11 +592,13 @@ nav a span {
 
     min-height: 42px;
 
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 
-/* APPROVAL */
+/* =========================================
+   MANUAL APPROVAL
+========================================= */
 
 .approval-box {
     background: #f7faf9;
@@ -611,6 +624,26 @@ nav a span {
     gap: 9px;
 }
 
+.mini-avatar {
+    width: 30px;
+    height: 30px;
+
+    background: #e7effc;
+
+    color: #2877dd;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
 .approval-user strong {
     display: block;
 
@@ -633,8 +666,133 @@ nav a span {
     font-weight: bold;
 }
 
+.approval-details {
+    display: grid;
 
-/* BUTTONS */
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 9px;
+}
+
+.approval-details div {
+    background: #f7f9fc;
+
+    border-radius: 6px;
+
+    padding: 8px;
+}
+
+.approval-details span {
+    display: block;
+
+    color: #8994a5;
+
+    font-size: 8px;
+
+    margin-bottom: 3px;
+}
+
+.approval-details strong {
+    font-size: 10px;
+}
+
+.green-text {
+    color: #18a66b;
+}
+
+
+/* =========================================
+   ROLLBACK
+========================================= */
+
+.version-comparison {
+    background: #f7f9fc;
+
+    border: 1px solid #e9edf2;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.version-comparison span {
+    display: block;
+
+    color: #8994a5;
+
+    font-size: 8px;
+
+    margin-bottom: 4px;
+}
+
+.version-comparison strong {
+    font-size: 12px;
+}
+
+.arrow {
+    color: #9da8b7;
+
+    font-size: 16px;
+}
+
+.rollback-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 9px;
+
+    padding: 9px;
+
+    background: #fff9f6;
+
+    border-radius: 7px;
+}
+
+.rollback-icon-small {
+    width: 27px;
+    height: 27px;
+
+    background: #fff0e8;
+
+    color: #d97622;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.rollback-info strong {
+    display: block;
+
+    font-size: 9px;
+}
+
+.rollback-info p {
+    color: #96918d;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
 
 .button {
     width: 100%;
@@ -651,7 +809,7 @@ nav a span {
 
     font-weight: 700;
 
-    cursor: pointer;
+    cursor: default;
 }
 
 .success-button {
@@ -667,46 +825,9 @@ nav a span {
 }
 
 
-/* ROLLBACK */
-
-.version-comparison {
-    background: #f7f9fc;
-
-    border: 1px solid #e9edf2;
-
-    border-radius: 8px;
-
-    padding: 11px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-.version-comparison span {
-    display: block;
-
-    color: #8994a5;
-
-    font-size: 8px;
-}
-
-.version-comparison strong {
-    display: block;
-
-    margin-top: 3px;
-
-    font-size: 12px;
-}
-
-.arrow {
-    color: #9da8b7;
-}
-
-
-/* REGIONS */
+/* =========================================
+   MULTI REGION
+========================================= */
 
 .regions {
     border-top: 1px solid #edf0f4;
@@ -719,7 +840,7 @@ nav a span {
 
     justify-content: space-between;
 
-    padding: 10px 0;
+    padding: 11px 0;
 
     border-bottom: 1px solid #edf0f4;
 }
@@ -733,8 +854,8 @@ nav a span {
 }
 
 .region-icon {
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
 
     background: #f0f4fa;
 
@@ -745,11 +866,11 @@ nav a span {
     align-items: center;
     justify-content: center;
 
+    color: #62718a;
+
     font-size: 7px;
 
     font-weight: 800;
-
-    color: #62718a;
 }
 
 .region-name strong {
@@ -768,14 +889,66 @@ nav a span {
     margin-top: 2px;
 }
 
-.region-online {
+.region-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.region-status > span {
+    color: #18a66b;
+
+    font-size: 10px;
+}
+
+.region-status strong {
+    display: block;
+
     color: #18a66b;
 
     font-size: 9px;
 }
 
+.region-status small {
+    display: block;
 
-/* DOCKER */
+    color: #8994a5;
+
+    font-size: 7px;
+
+    margin-top: 2px;
+}
+
+.region-summary {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    padding: 8px;
+
+    background: #f7f9fc;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+}
+
+.region-summary span {
+    color: #8994a5;
+}
+
+.region-summary strong {
+    color: #18a66b;
+}
+
+
+/* =========================================
+   DOCKER
+========================================= */
 
 .docker-info {
     border-top: 1px solid #edf0f4;
@@ -786,9 +959,13 @@ nav a span {
 
     justify-content: space-between;
 
+    align-items: center;
+
     padding: 9px 0;
 
     border-bottom: 1px solid #edf0f4;
+
+    gap: 15px;
 }
 
 .docker-info span {
@@ -798,42 +975,64 @@ nav a span {
 }
 
 .docker-info strong {
+    color: #303b4d;
+
     font-size: 9px;
+
+    text-align: right;
+
+    word-break: break-word;
 }
 
 .container-running {
     margin-top: 10px;
 
-    padding: 8px;
+    padding: 9px;
 
     background: #eef8f4;
 
     border-radius: 6px;
 
-    color: #159866;
+    display: flex;
 
-    font-size: 9px;
+    align-items: center;
 
-    font-weight: 700;
+    gap: 7px;
 }
 
-.container-running span {
-    display: inline-block;
+.container-running > span {
+    width: 7px;
+    height: 7px;
 
-    width: 6px;
-    height: 6px;
+    flex-shrink: 0;
 
     background: #20b879;
 
     border-radius: 50%;
+}
 
-    margin-right: 5px;
+.container-running strong {
+    display: block;
+
+    color: #159866;
+
+    font-size: 9px;
+}
+
+.container-running small {
+    display: block;
+
+    color: #7f968b;
+
+    font-size: 8px;
+
+    margin-top: 2px;
 }
 
 
-/* =========================
+/* =========================================
    PIPELINE
-========================= */
+========================================= */
 
 .pipeline-card {
     background: white;
@@ -881,12 +1080,14 @@ nav a span {
     display: flex;
 
     align-items: center;
+
+    width: 100%;
 }
 
 .pipeline-step {
     text-align: center;
 
-    min-width: 100px;
+    min-width: 105px;
 }
 
 .step-circle {
@@ -954,9 +1155,9 @@ nav a span {
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
     display: flex;
@@ -971,9 +1172,9 @@ footer {
 }
 
 
-/* =========================
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
 @media (max-width: 1000px) {
 
@@ -994,7 +1195,6 @@ footer {
     .pipeline-step {
         min-width: 120px;
     }
-
 }
 
 
@@ -1006,18 +1206,20 @@ footer {
         padding: 20px 8px;
     }
 
-    .logo div:last-child,
+    .logo-text,
     .menu-title,
-    nav a:not(.active) {
+    .sidebar-bottom {
         display: none;
     }
 
     nav a {
         justify-content: center;
+
+        padding: 13px 8px;
     }
 
-    .sidebar-bottom {
-        display: none;
+    nav a span {
+        font-size: 17px;
     }
 
     .main {
@@ -1027,17 +1229,21 @@ footer {
     }
 
     .header {
+        flex-direction: column;
+
         align-items: flex-start;
 
         gap: 15px;
-
-        flex-direction: column;
     }
 
     .header-right {
         width: 100%;
 
         justify-content: space-between;
+    }
+
+    .deployment-card {
+        gap: 25px;
     }
 
     footer {
