@@ -18,4 +18,4 @@ hooks:
     - location: scripts/start.sh
       timeout: 300
       runas: root
-   exit 0
+   exit 1
