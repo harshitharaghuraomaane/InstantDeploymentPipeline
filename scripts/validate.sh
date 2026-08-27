@@ -15,4 +15,4 @@ echo "Checking application..."
 curl -f http://localhost/ > /dev/null
 
 echo "Application validation successful."
-exit 0
+exit 1234
